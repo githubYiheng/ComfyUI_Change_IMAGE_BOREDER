@@ -84,33 +84,7 @@ class ChangeImageBorder:
             tensors = out_image
 
         return (tensors, )
-        print(type(image))
-        # image = pil2tensor(image)
-        # return (image, )
-        # Convert torch.Tensor to PIL Image
-        # img = Image.fromarray(tensor_image.mul(255).byte().permute(1, 2, 0).numpy())
-        # # Convert to RGBA if it's not already in this mode
-        # image = image.convert("RGBA")
-
-        # Get the image data
-        data = np.array(image)
-
-        # Change the top and bottom border pixels to black
-        # data[:border_size, :] = [0, 0, 0, 255]  # top
-        # data[-border_size:, :] = [0, 0, 0, 255]  # bottom
-
-        # # Change the left and right border pixels to black
-        # data[:, :border_size] = [0, 0, 0, 255]  # left
-        # data[:, -border_size:] = [0, 0, 0]  # right
-
-        # Create a new image from the modified data
-        new_img = Image.fromarray(data, mode='RGBA')
-
         
-        # Convert to PyTorch tensor and add batch dimension
-        tensor_image = torch.from_numpy(data).permute(2, 0, 1).unsqueeze(0)
-        return tensor_image
-        return (pil2tensor(new_img), )
 
 # Set the web directory, any .js file in that directory will be loaded by the frontend as a frontend extension
 # WEB_DIRECTORY = "./somejs"
