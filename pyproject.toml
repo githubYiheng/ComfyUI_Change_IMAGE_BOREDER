@@ -1,0 +1,14 @@
+[project]
+name = "comfyui_change_image_boreder"
+description = "Nodes:Change Image Border"
+version = "1.0.0"
+license = "LICENSE"
+
+[project.urls]
+Repository = "https://github.com/githubYiheng/ComfyUI_Change_IMAGE_BOREDER"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI_Change_IMAGE_BOREDER"
+Icon = ""
